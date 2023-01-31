@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore DOM</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h3>Exploring DOM</h3>
+        <article>
+          <h3>article-1</h3>
+          <p class="author">author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            quibusdam iste illo nam quis labore beatae fuga, exercitationem a,
+            quos ipsam officiis accusantium. Tenetur deleniti excepturi dolores.
+            Sunt, quas in.
+          </p>
+        </article>
+        <article class="special">
+          <h3>article-2</h3>
+          <p class="author">author-2</p>
+          <p class="description">
+            Dolorum natus obcaecati magni vero, hic maiores est quibusdam iusto
+            nihil molestias officiis dolor pariatur similique, veritatis fuga
+            libero fugit quia sit. Eveniet blanditiis suscipit veniam laudantium
+            at quas officiis?
+          </p>
+        </article>
+        <article class="special">
+          <h3>article-3</h3>
+          <p title="Underrated" id="bestseller" class="author">author-3</p>
+          <p class="description">
+            Rem aut iusto quaerat? Fuga dolore, officia illo similique
+            reiciendis necessitatibus nostrum dolores reprehenderit, aspernatur,
+            at incidunt pariatur. Ratione sed quibusdam, dignissimos sequi cum
+            ipsum saepe corrupti quos ab corporis?
+          </p>
+        </article>
+      </section>
+    </main>
+    <script>
+      var author = document.querySelectorAll(".special h3");
+      for (var i = 0; i < author.length; i++) {
+        var element = author[i];
+        //console.log(element.innerHTML);
+        element.innerHTML = "Lekhok " + (i + 1);
+        element.style.color = "lightblue";
+      }
+    </script>
+  </body>
+</html>

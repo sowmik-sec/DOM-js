@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore DOM</title>
+    <style>
+      article {
+        border: 2px solid tomato;
+        border-radius: 20px;
+        margin: 5px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h3>Exploring DOM</h3>
+        <article id="first-article">
+          <h3>article-1</h3>
+          <p class="author">author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            quibusdam iste illo nam quis labore beatae fuga, exercitationem a,
+            quos ipsam officiis accusantium. Tenetur deleniti excepturi dolores.
+            Sunt, quas in.
+          </p>
+        </article>
+        <article id="second-article" class="special">
+          <h3>article-2</h3>
+          <p class="author">author-2</p>
+          <p class="description">
+            Dolorum natus obcaecati magni vero, hic maiores est quibusdam iusto
+            nihil molestias officiis dolor pariatur similique, veritatis fuga
+            libero fugit quia sit. Eveniet blanditiis suscipit veniam laudantium
+            at quas officiis?
+          </p>
+        </article>
+        <article id="third-article" class="special">
+          <h3>article-3</h3>
+          <p title="Underrated" id="bestseller" class="author">author-3</p>
+          <p class="description">
+            Rem aut iusto quaerat? Fuga dolore, officia illo similique
+            reiciendis necessitatibus nostrum dolores reprehenderit, aspernatur,
+            at incidunt pariatur. Ratione sed quibusdam, dignissimos sequi cum
+            ipsum saepe corrupti quos ab corporis?
+          </p>
+        </article>
+        <article>
+          <h3>Gift items:</h3>
+          <ul id="list">
+            <li>gift-item-1</li>
+            <li>gift-item-2</li>
+            <li>gift-item-3</li>
+            <li>gift-item-4</li>
+            <li>gift-item-5</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script>
+      var article = document.getElementById("first-article");
+      var newParagraph = document.createElement("p");
+      newParagraph.innerHTML = "This is copied from Jhankar";
+      article.appendChild(newParagraph);
+
+      var article2 = document.getElementById("second-article");
+      var para = document.createElement("p");
+      para.innerHTML = "Shawa etaw angshik copy korchi";
+      article2.appendChild(para);
+
+      var article3 = document.getElementById("third-article");
+      var npara = document.createElement("p");
+      npara.innerHTML = "eta eka korar try korchi";
+      article3.appendChild(npara);
+
+      var gift = document.getElementById("list");
+      var newItem = document.createElement("li");
+      newItem.innerHTML = "gift-item";
+      gift.appendChild(newItem);
+    </script>
+  </body>
+</html>

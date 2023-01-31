@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Comment</title>
+  </head>
+  <body>
+    <h1>Please add your comment</h1>
+    <div id="comment">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem ducimus
+        iure, perspiciatis deleniti, accusamus repudiandae aut ea porro maiores,
+        quasi quos quod aliquam ratione asperiores perferendis inventore tenetur
+        dolore quo? Dolorum perspiciatis veniam fuga, enim ab excepturi eius
+        dignissimos animi perferendis tempora, accusantium culpa consequuntur,
+        consectetur commodi eligendi ea? Voluptatem?
+      </p>
+      <p>
+        Provident, eum sit ab excepturi maiores autem libero rerum sequi
+        deleniti magnam, eligendi natus dignissimos magni quisquam laudantium!
+        Placeat odit, nam vitae facilis ipsum sapiente, necessitatibus atque
+        voluptas, dicta totam velit commodi culpa ipsa consectetur! Iure
+        blanditiis eveniet impedit, provident repudiandae ab, quisquam eligendi
+        explicabo earum beatae porro laboriosam ad?
+      </p>
+      <p>
+        Consectetur, commodi tenetur iste optio vero quas veniam? Error
+        voluptatem, nemo eveniet perspiciatis a ipsa officia ut sunt, delectus
+        sequi qui libero modi dolore magnam! Ipsum harum hic at porro
+        exercitationem a perferendis, nam reprehenderit nostrum iste. Aliquid,
+        recusandae nesciunt illum reprehenderit minus blanditiis unde reiciendis
+        repudiandae fugiat ducimus ipsam.
+      </p>
+    </div>
+    <textarea name="" id="textarea" cols="60" rows="10"></textarea>
+    <br />
+    <button id="btn">Post Comment</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        const text = document.getElementById("textarea").value;
+        const para = document.createElement("p");
+        para.innerText = text;
+        document.getElementById("comment").appendChild(para);
+        console.log(typeof text);
+        text = "";
+      });
+    </script>
+  </body>
+</html>
